@@ -29,8 +29,6 @@ public class UserController {
     public User getUserById(@PathVariable Long id){
         // Implementation for fetching user by ID
         return userService.fetchUserById(id);
-
-
     }
 
 }
