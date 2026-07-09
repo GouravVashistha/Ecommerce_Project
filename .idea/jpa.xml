@@ -3,4 +3,13 @@
   <component name="JpaBuddyIdeaProjectConfig">
     <option name="renamerInitialized" value="true" />
   </component>
+  <component name="PersistenceUnitSettings">
+    <persistence-units>
+      <persistence-unit moduleName="Ecommerce_Project" name="Default">
+        <packages>
+          <package value="com.ecom" />
+        </packages>
+      </persistence-unit>
+    </persistence-units>
+  </component>
 </project>
