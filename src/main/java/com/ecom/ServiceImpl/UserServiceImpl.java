@@ -12,6 +12,7 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
 
     private List<User> userList = new ArrayList<>();
+    private  Long nextId = 1L;
 
     @Override
     public List<User> fetchAllUsers() {
@@ -19,7 +20,18 @@ public class UserServiceImpl implements UserService {
     }
 
     public List<User> createUser(User user) {
+        user.setId(nextId++);
         userList.add(user);
         return userList;
+    }
+
+    @Override
+    public User fetchUserById(Long id) {
+       for(User user : userList){
+           if(user.getId().equals(id)){
+               return user;
+           }
+       }
+       return null; // or throw an exception if user not found
     }
 }
